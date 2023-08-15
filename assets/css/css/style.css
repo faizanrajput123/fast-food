@@ -4,7 +4,8 @@
     margin: 0;
     --primary-color:red;
 --primary-color-transparent:rgba(255, 49, 49, 0.8);
-
+--yellow:yellow;
+--green:hsl(101, 100%, 50%);
      --black-color: black;
 --black-transparent:rgb(0, 0,0, 0.6);
 --white-color:rgb(247, 234, 234);
@@ -99,6 +100,7 @@ font-size: x-large;margin-top: 7px;
 }
 .top-list-right li a:hover{
     color: var(--black-color);
+    -webkit-transform: rotatex(-360deg)
 }
 .nav-bar-2{
     display: flex;
@@ -113,7 +115,7 @@ font-size: x-large;margin-top: 7px;
     font-weight: 900;
 }
 .top-list-2{
-    padding: 20px;
+    padding: 30px;
 }
 .top-list-2 li a{
 
@@ -122,7 +124,7 @@ font-size: x-large;margin-top: 7px;
     text-decoration: none;
 }   
  .right-list-2 {
-    padding: 23px;
+    padding: 35px;
     display: flex;
     list-style-type: none;
     text-decoration: none;
@@ -137,8 +139,8 @@ font-size: x-large;margin-top: 7px;
 }
 .right-list-2 li a:hover{
     background-color: var(--primary-color);
-    padding: 5px;
-    border-radius: 5px;
+    height: 1px;
+    border-radius: 6px;
 }
 .right-list-2 li a:hover .active{
     background-color: var(--primary-red);
@@ -185,14 +187,14 @@ font-size: x-large;margin-top: 7px;
 }
 .product h3{
     position: absolute;
-    font-weight: 90;
+    font-weight: 500;
     font-size: 30px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--white-color); 
 
-    transition: opacity 0.2s ease; 
+    transition: opacity 0.2s ease-in; 
 }
 .overlay-1{
     position: absolute;
@@ -295,6 +297,10 @@ text-decoration: none;
 padding: 10px;
 border-radius: 5px;
 }
+.left-space{
+    left: 100%;
+}
+
 .main-content-2 .text-center-1 .center h1{
     margin-top: -108px;
     color:var(--white-color);
@@ -308,104 +314,288 @@ border-radius: 5px;
     text-align: center;
     right: 12px;
 }
-.menusimgs .imgs{
-    width: 50%;
-    position: relative;
-} 
- .menusimgs .imgs img{
-    width: 100%;
-    top:-1px;
-    position: absolute;
-    height: 450px;
- }
-.heading h1{
-margin-top: 20px;
-position: absolute;
-left: 65%;
-
+.pizza-section1{
+    margin-top: 55%;
 }
-.products ul li{
-margin-top: 1px;
-position: absolute;
-left: 65%; 
+.pizza-section1 img{
+width: 70%;
+height: 100%;
 }
-.pizza-menu{
-    width: 50%;
-}
-
-
-
-
-.products{
-    margin-right: 20%;
-    margin-top: 13%;
-}
-
-
-
-.products ul li{
+        .food-section{
+            display: flex;
+        }
+        
+        
+        .food-pic{
+            width: 50%;
+        }
+        
+        .food-pic img{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        
+        .food-menu{
+            width: 50%;
+        }
+        
+        .food-heading{
+            align-items: center;
+        }
+        .food-heading h2{
+            color: var(--red-color);
+            margin: 20px;
+            font-size: 40px;
+        }
+        .food-products1{
+            text-align: left;
+            margin: 20px;
+        }
+        
+        
+        .food-products1 ul{
+            list-style-type: none;
+            text-align: center;
+        }
+        
+        .food-products1 ul li{
+            list-style-type: none;
+            display: flex;
+            padding: 5px;
+            font-size: 20px;
+            margin: 20px;
+            color: var(--musky-grey);
+            line-height: 1em;
+            padding: 12px 12px;
+            position: relative;
+        }
+        
+        .food-products1 ul li::after{
+            display: block;
+            float: right;
+        }
+        .food-products1 .list li::before{
+            font-family: 'icomoon' !important;
+            content: '\e99a';
+            color: var(--primary-color);
+            position: absolute;
+            left: 30%;
+            margin-top: .8em; 
+            border-top: 2px dotted var(--grey);
+            right: 99%;
+            bottom: 16px;
+        }
+        .food-products1 ul li h4{
+            font-weight: 100;
+            text-align: left;
+        }
+        
+        .food-products{
+            text-align: left;
+            margin: 20px;
+        }
+        
+        
+        .food-products ul{
+            list-style-type: none;
+            text-align: center;
+        }
+        
+        .food-products ul li{
+            list-style-type: none;
+            display: flex;
+            padding: 5px;
+            font-size: 20px;
+            margin: 20px;
+            color: var(--musky-grey);
+            line-height: 1em;
+            padding: 12px 12px;
+            position: relative;
+        }
+        
+        .food-products ul li::after{
+            display: block;
+            float: right;
+        }
+        .food-products ul li h4{
+            font-weight: 100;
+            text-align: left;
+        }
+        
+        .line{
+            width: 70%;
+            content: "";
+            border-bottom: 2px dotted var(--grey);
+            align-items: center;
+        }
+        
+        .menu-item{
+            flex: 1;
+            text-align: center;
+        }
+        
+        
+        .menu-item:nth-child(2){
+            flex: 3;
+        }
+        
+        .menu-item:nth-child(1){
+            flex: 1.5;
+        }
+        
+        .burger-list li::before{
+            font-family: 'icomoon' !important;
+            color: var(--grey);
+            content: '\e9bd';
+            position: absolute;
+            right: 99%;
+            bottom: 16px;
+        }
+        
+        .pasta-list li::before{
+            font-family: 'icomoon' !important;
+            color: var(--yellow);
+            content: '\e900';
+            position: absolute;
+            right: 99%;
+            bottom: 16px;
+        }
+        
+        .salad-list li::before{
+            font-family: 'icomoon' !important;
+            color: var(--green);
+            content: '\e9a4';
+            position: absolute;
+            right: 99%;
+            bottom: 16px;
+        }
+        .order-now{
+            padding: 28px;
+            background-color: var(--primary-color);
+            text-align: center;
+        }
+        .order-now a{
+            display: inline-block;
+            list-style-type: none;
+            text-decoration: none;
+        }
+        .order-now a h4{
+            display: inline-block;
+            color: var(--white-color);
+            font-weight: 200;
+            font-size: 21px;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            padding: 0 11px;
+            
+        }
+        .order-now a h4::before{
+            font-family: 'icomoon' !important;
+            content: '\e942';
+            color: var(--white-color);
+            position: absolute;
+            right: 100%;
+            bottom: 6px;
+        }
+        .order-now a h4:hover{
+            transform: scale(1.2); 
+        }
+        
+        
+        .contact-sec{
+            background-color: var(--primary-color);
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .contact-sec img{
+            margin: 20px;
+            width: 160px;
+            color:000;
+            height: 46px;
+        }
+        
+        .contact-sec ul.social-bar{
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            margin: 15px;
+        }
+        
+        .contact-sec ul.social-bar li{
+            padding: 12px;
+        }
+        
+        .contact-sec ul.social-bar li a{
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--white-color);
+            background-color: #000 0.1 ;
+            font-size: 16px;
+            border-radius: 100px;
+            transition: transform 0.2s;
+            -webkit-transition: all .2s ease-out;
+        }
+        
+        .contact-sec ul.social-bar li a:hover{
+            background-color: var(--black-color);
+        }
+        
+        .contact-sec ul.social-bar li a span{
+            -webkit-transition: width 2s, -webkit-transform 2s;
+        }
+        
+        .contact-sec ul.social-bar li a:hover span{
+            color: var(--white);
+            display: inline-block;
+            -webkit-transform: rotateY(-360deg);
+        }
+        
+        .contact-sec ul{
+            margin: 35px;
+        }
+        
+        .contact-sec ul li{
+            list-style-type: none;
+        }
+        
+        .contact-sec ul li a{
+            text-decoration: none;
+            font-size: 12px;
     list-style-type: none;
-    display: flex;
-    padding: 5px;
-    font-size: 20px;
-    margin: 20px;
-    color: var(--musky-grey);
-    line-height: 1em;
-    position: relative;
-}
-
-.products ul li::after{
-    display: block;
-    float: right;
-    position: absolute;
-    left: 18%;
-    margin-top: .6em; 
-    border-top: 2px solid var(--grey);
-    width: 30%;
-    content: "";
-}.heading2 h1{
-    margin-top: 20px;
-    position: absolute;
-    left: 65%;
+            color:var(--musky-grey);
+        }
+        
     
-    }
-    .products2 ul li{
-    margin-top: 1px;
-    position: absolute;
-    left: 65%; 
-    }
-    .pizza-menu{
-        width: 50%;
-    }
-    
-    
-    
-    
-    .products2{
-        margin-right: 20%;
-        margin-top: 13%;
-    }
-    
-    
-    
-    .products2 ul li{
-        list-style-type: none;
-        display: flex;
-        padding: 5px;
-        font-size: 20px;
-        margin: 20px;
-        color: var(--musky-grey);
-        line-height: 1em;
-        position: relative;
-    }
-    
-    .products2 ul li::after{
-        display: block;
-        float: right;
-        position: absolute;
-        left: 18%;
-        margin-top: .6em; 
-        border-top: 2px solid var(--grey);
-        width: 30%;
-        content: "";
-    }
+        .contact-sec ul li a:hover span{
+            color: var(--white-color);
+            background-color: var(-);
+        }
+        
+     @media screen and (min-width: 480px) {
+        body {
+            background-color: ;
+          }
+          }
+    @media screen and (min-width: 575px) {
+            body {
+              background-color: ;
+            }
+          }
+    @media screen and (min-width: 767px) {
+            body {
+              background-color: ;
+            }
+          }
+          @media screen and (min-width: 991px) {
+            body {
+              background-color: ;
+            }
+          }
+          @media screen and (min-width: 1199px) {
+            body {
+              background-color: ;
+            }
+          }
